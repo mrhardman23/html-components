@@ -9,20 +9,35 @@
 
         <h1>Form Example</h1>
         
+        <!-- This is a form that is used to ship a purchase to a customer. -->
         <form method="GET">
 
-            <label for="addr">Address:</label>
+            <!-- This label and text input are for the customer to enter their street address (i.e. 100 Innovation Drive). -->
+            <label for="addr"><b>Address:</b></label>
             <input type="text" name="address" size="50" maxlength="75" placeholder="Please enter your street address" id="addr" />
+            
+            <!-- 
+                These are break lines to bring the next labels down to another line. This adds
+                more whitespace and better design to the form.
+            -->
             <br /><br />
 
-            <label for="postal">Postal Code:</label>
+            <!-- This label and text input are for the customer to enter their Postal Code (i.e. R3T 6G2). -->
+            <label for="postal"><b>Postal Code:</b></label>
             <input type="text" name="postalCode" size="10" maxlength="10" placeholder="A1A 1A1" id="postal"/>
+            
+            <!-- These non-breaking spaces add space between the Postal Code input and the City input -->
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
-            <label for="city">City:</label>
+            <!-- This label and text input are for the customer to enter the city they live in (i.e. Winnipeg, MB). -->
+            <label for="city"><b>City:</b></label>
             <input type="text" name="city" size="30" maxlength="30" placeholder="Please enter your city" id="city" />
 
-            <p> <label for="shipping">Please Choose A Shipping Method:</label> </p>
+            <!-- 
+                This label and dropdown menu are for the customer to choose their preferred shipping method
+                from these options: Standard, One-Day, and Two-Day Shipping.
+             -->
+            <p> <label for="shipping"><b><u>Please Choose A Shipping Method:</u></b></label> </p>
             <select name="shipping" id="shipping">
                 <option value="standard">Standard Shipping</option>
                 <option value="one-day">One-Day Shipping</option>
@@ -30,23 +45,42 @@
             </select>
             <br />
 
-            <p> Please Select A Payment Method: </p>
+            <!-- 
+                These labels and radio buttons are for the customer to choose their preferred payment method
+                from these options: PayPal (checked by default), Debit Card, and Credit Card.
+             -->
+            <p> <b><u>Please Select A Payment Method:</u></b> </p>
             <label> <input type="radio" name="payment-methods" value="paypal" checked="true" /> PayPal </label>
             <label> <input type="radio" name="payment-methods" value="debit"/> Debit Card </label>
             <label> <input type="radio" name="payment-methods" value="credit"/> Credit Card </label>
             <br /><br />
             
-            <label for="comments">Additional Comments:</label>
+            <!-- 
+                This label and text area are for the customer to enter any additional comments 
+                that might be useful to properly deliver the purchase (i.e. Please call 555-555-0192 
+                when delivering).
+            -->
+            <label for="comments"><b><i>Additional Comments:</i></b></label>
             <br />
             <textarea rows="4" cols="40" name="comments" id="comments"></textarea>
             <br /><br />
 
+            <!-- 
+                This label and checkbox are for the customer to choose whether they want email
+                updates from our company and about the progress of the delivery of their purchase.
+                It is selected by default.
+             -->
             <label> <input type="checkbox" name="emailUpdates" checked /> Sign me up for e-mail updates </label>
             <br />
 
+            <!-- 
+                This label and checkbox are for the customer to choose whether they want their
+                payment information saved. It is selected by default.
+             -->
             <label> <input type="checkbox" name="savePayment" checked /> Save my payment information </label>
             <br /><br />
 
+            <!-- This will submit the form and process the information needed for delivery. -->
             <input type="submit" />
         </form>
     </body>
